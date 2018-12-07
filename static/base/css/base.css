@@ -11,17 +11,24 @@ body {
 }
 
 header {
-	width: 100%;
-	/* document.documentElement.style.fontSize = innerWidth / 320 * 16 + "px";
-	 在320px屏幕中，1rem即是16px，默认字体大小16px方便以后计算
-	 */
-	/* 高度要设置为44px，即 44 / 16 = 2.75*/
-	height: 2.75rem;
-	background: #ffd601;
-	color: white;
-	font-size: 1.5625rem;
-	text-align: center;
-	line-height: 2.75rem;
+    /* 320px >>>  16px*/
+    /* 400px >>>  ? */
+
+    /* docuemnt >>> font-size: 16px */
+    /* 320px >>> 1rem >>> 16px*/
+    /* 400px >>> 1rem >>> ? */
+    width: 100%;
+
+    /* 320 >> 44px*/
+    /* 16px >> 1rem */
+    /* 44px >> ? rem */
+    /*height: 44px;*/
+    height: 2.75rem;
+    background: #ffd601;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2.75rem;
 	position: fixed;
 	top: 0;
 	left: 0;

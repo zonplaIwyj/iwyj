@@ -4,8 +4,27 @@
     爱鲜蜂 | 首页
 {% endblock %}
 {% block extcss %}
-<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/swiper.min.css' %}">
+
+
+{% endblock %}
+{% block extjs %}
+    <script src="{% static 'home/js/home.js' %}"></script>
+    <script src="{% static 'home/js/swiper.min.js' %}"></script>
 {% endblock %}
 {% block content %}
+    <div class="home">
+        <div class="swiper-container" id="top-swiper">
+            <div class="swiper-wrapper">
+                {% for wheel in wheels %}
+                    <div class="swiper-slide">
+                        <img src="{{ wheel.img }}">
+                    </div>
+                {% endfor %}
 
+            </div>
+        </div>
+
+    </div>
 {% endblock %}

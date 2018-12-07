@@ -4,8 +4,10 @@
     购物车
 {% endblock %}
 {% block extcss %}
-<link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
+    <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
 {% endblock %}
 {% block content %}
-
+    {% block extjs %}
+        <script src="{% static 'cart/js/cart.js' %}"></script>
+    {% endblock %}
 {% endblock %}
