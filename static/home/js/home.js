@@ -7,6 +7,14 @@ $(function () {
         // pagination: '.swiper-pagination',
         // paginationClickable: true,
         loop: true,
-        autoplay: 214,
-    });
+        autoplay: 2147,
+    })
+    var swiper = new Swiper('#mustbuySwiper', {
+        // pagination: '.swiper-pagination',
+        // paginationClickable: true,
+        loop: true,
+        autoplay: 512,
+        slidesPerView:3,
+        spaceBetween:9,
+    })
 })
