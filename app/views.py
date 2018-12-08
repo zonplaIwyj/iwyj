@@ -39,13 +39,7 @@ def home(request):
 
     return render(request, 'home/home.html', context=data)
 
-def marketbase(request):
-    # 默认是热销榜， 全部分类， 综合排序
-    return redirect('axf:market', 104749, 0, 0)
 
-# 参数1: categoryid 分类
-# 参数2: childid 子类
-# 参数3: sortid 排序方式
 def market(request, categoryid, childid, sortid):
     # 分类信息
     foodtypes = Foodtype.objects.all()
