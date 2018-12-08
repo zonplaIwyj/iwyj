@@ -107,3 +107,4 @@ def mine(request):
 
 def register(request):
     return render(request, 'mine/register.html')
+
