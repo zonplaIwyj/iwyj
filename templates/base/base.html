@@ -1,23 +1,26 @@
 {% extends 'base/base_template.html' %}
 {% load static %}
+
 {% block extbasecss %}
     <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
     {% block extcss %}
     {% endblock %}
 {% endblock %}
+
 {% block extbasejs %}
     <script src="{% static 'base/js/base.js' %}"></script>
     {% block extjs %}
     {% endblock %}
 {% endblock %}
+
 {% block body %}
+    {#    头部#}
     {% block header %}
         <header>爱鲜蜂</header>
     {% endblock %}
 
-
+    {#    主体内容#}
     <div class="hidescroll">
-
         <div id="content">
             {% block content %}
 
@@ -25,34 +28,33 @@
         </div>
     </div>
 
-
+    {#    底部#}
     {% block footer %}
         <footer>
             <a href="{% url 'axf:home' %}" class="home">
                 <dl>
                     <dt><span></span></dt>
-                    <dd>首页</dd>
+                    <dd> 首页 </dd>
                 </dl>
             </a>
-            <a href="{% url 'axf:market' %}" class="market">
+            <a href="{% url 'axf:marketbase' %}" class="market">
                 <dl>
                     <dt><span></span></dt>
-                    <dd>闪购超市</dd>
+                    <dd> 闪购超市 </dd>
                 </dl>
             </a>
             <a href="{% url 'axf:cart' %}" class="cart">
                 <dl>
                     <dt><span></span></dt>
-                    <dd>购物车</dd>
+                    <dd> 购物车 </dd>
                 </dl>
             </a>
             <a href="{% url 'axf:mine' %}" class="mine">
                 <dl>
                     <dt><span></span></dt>
-                    <dd>我的</dd>
+                    <dd> 我的 </dd>
                 </dl>
             </a>
         </footer>
     {% endblock %}
-
 {% endblock %}
